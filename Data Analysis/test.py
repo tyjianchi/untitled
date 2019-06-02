@@ -72,6 +72,7 @@ def test6():
     print('调用 flat 函数：')
     print(c)
     print('\n')
+
     # # 获得了和 NumPy 内建的广播支持相同的结果
     #
     print('x 与 y 的和：')
