@@ -8,16 +8,16 @@ class titanic_ana:
 
     def get_data(self,file_path):
         file_data=pd.read_csv(file_path)
-        #file_data.dropna(subset=["Age"],axis=0,inplace=True)
-        #file_data.replace({'Sex':{'male':0,'female':1}},inplace=True)
+        # file_data.dropna(subset=["Age"],axis=0,inplace=True)
+        # file_data.replace({'Sex':{'male':0,'female':1}},inplace=True)
         pre_x=file_data[["Pclass","SibSp","Parch"]]
         post_y=file_data["Fare"]
         return pre_x,post_y
 
     def test_data(self,file_path):
         file_data = pd.read_csv(file_path)
-        #file_data.dropna(subset=["Age"],axis=0,inplace=True)
-        #file_data.replace({'Sex':{'male':0,'female':1}},inplace=True)
+        # file_data.dropna(subset=["Age"],axis=0,inplace=True)
+        # file_data.replace({'Sex':{'male':0,'female':1}},inplace=True)
         test_x=file_data[["Pclass","SibSp","Parch"]]
         return test_x
 
@@ -42,7 +42,7 @@ class titanic_ana:
         print(df)
 if __name__=='__main__':
     ta=titanic_ana()
-    #ta.test1()
+    # ta.test1()
     pre_x,post_y=ta.get_data(r'/Users/Elven/PycharmProjects/untitled/Data Analysis/train.csv')
     ta.fit(pre_x,post_y)
     test_x=ta.test_data(r'/Users/Elven/PycharmProjects/untitled/Data Analysis/test.csv')
